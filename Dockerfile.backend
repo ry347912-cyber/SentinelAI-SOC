@@ -1,0 +1,6 @@
+FROM python:3.11-slim
+WORKDIR /app
+RUN pip install fastapi uvicorn python-multipart scikit-learn numpy aiofiles
+COPY . .
+EXPOSE 8000
+CMD ["python3", "backend.py"]
